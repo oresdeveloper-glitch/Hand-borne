@@ -1,0 +1,6 @@
+train: C:\Users\LETFIX\Downloads\hand-bone-abnormality-detection (2)\hand-bone-abnormality-detection\Dataset\Training
+val: C:\Users\LETFIX\Downloads\hand-bone-abnormality-detection (2)\hand-bone-abnormality-detection\Dataset\Validation
+test: C:\Users\LETFIX\Downloads\hand-bone-abnormality-detection (2)\hand-bone-abnormality-detection\Dataset\Testing
+names:
+  0: NORMAL
+  1: ABNORMAL

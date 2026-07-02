@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode - CRITICAL for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --primary: 210 10% 22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 60% 48%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 200 82% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --muted: 210 10% 40%;
+    --muted-foreground: 0 0% 83%;
+    --popover: 210 10% 18%;
+    --popover-foreground: 0 0% 95%;
+    --card: 210 10% 18%;
+    --card-foreground: 0 0% 95%;
+  }
+
+  .dark {
+    --primary: 0 0% 95%;
+    --primary-foreground: 210 10% 22%;
+    --secondary: 174 60% 48%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 200 82% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --muted: 210 10% 40%;
+    --muted-foreground: 0 0% 83%;
+    --popover: 210 10% 18%;
+    --popover-foreground: 0 0% 95%;
+    --card: 210 10% 18%;
+    --card-foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-slate-200 dark:border-slate-700;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100;
+    @apply font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+    font-variation-settings: 'opsz' 32;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Professional typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-slate-900 dark:text-white;
+    letter-spacing: -0.025em;
+  }
+  
+  /* Accessibility focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+    border-radius: 4px;
+  }
+}
+
+/* Smooth theme transitions for common elements */
+.bg-white, 
+.bg-slate-50, 
+.bg-slate-100, 
+.bg-slate-800,
+.bg-slate-900,
+.border-slate-200,
+.border-slate-700,
+.border-slate-800 {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.text-slate-900,
+.text-slate-700,
+.text-slate-600,
+.text-slate-500,
+.text-slate-400,
+.text-slate-300,
+.text-slate-100,
+.text-white {
+  transition: color 0.3s ease;
+}
+
+@layer utilities {
+  .animated-gradient {
+    background: linear-gradient(-45deg, #1e40af, #0d9488, #0891b2, #1e40af);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  .animated-gradient-dark {
+    background: linear-gradient(-45deg, #1e40af, #0d9488, #0891b2, #1e40af);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .glass-morphism-dark {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .premium-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  .premium-shadow-dark {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary));
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-dark {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
