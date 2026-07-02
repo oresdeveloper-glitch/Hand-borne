@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+hand-bone-abnormality-detection/saved_model/
+hand-bone-abnormality-detection/saved_model_test/
+hand-bone-abnormality-detection/saved_model_yolo/
+hand-bone-abnormality-detection/runs/
+hand-bone-abnormality-detection/dist/
+hand-bone-abnormality-detection/Dataset/
+hand-bone-abnormality-detection/__pycache__/
+hand-bone-abnormality-detection/*.log
+hand-bone-abnormality-detection/*.pt
+hand-bone-abnormality-detection/*.bat
+hand-bone-abnormality-detection/*.mjs
+hand-bone-abnormality-detection/email-server.py
+hand-bone-abnormality-detection/start-dev.bat
+hand-bone-abnormality-detection/create-emailjs-account.py
+hand-bone-abnormality-detection/vite-output.log
+hand-bone-abnormality-detection/scripts/
+hand-bone-abnormality-detection/tests/
+
+# Model files
+*.keras
+*.h5
+*.pth
+*.pt
