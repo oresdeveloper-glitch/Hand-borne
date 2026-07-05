@@ -1,0 +1,20 @@
+# Local environment files
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Deployment artifacts and logs
+*.log
+
+# Large project artifacts
+Dataset/
+runs/
+saved_model/
+saved_model_test/
+saved_model_yolo/
